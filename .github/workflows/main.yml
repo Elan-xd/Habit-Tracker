@@ -33,7 +33,7 @@ jobs:
 
       - name: Align APK
         run: |
-          $ZIPALIGN -f app/HabitTracker-unsigned.apk aligned.apk
+          $ZIPALIGN -f 4 app/HabitTracker-unsigned.apk aligned.apk
 
       - name: Sign APK
         run: |
