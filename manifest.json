@@ -1,0 +1,72 @@
+{
+  "id": "/habit-tracker",
+  "name": "Habit Tracker",
+  "short_name": "HabitTracker",
+  "description": "Track your daily habits, build consistency, and analyze your progress.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay", "tabbed"],
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["lifestyle", "productivity", "health"],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-9a9c00076e82",
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "file_handlers": [
+    {
+      "action": "/habit_tracker_dashboard.html",
+      "accept": {
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+habit",
+      "url": "/habit_tracker_dashboard.html?protocol=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/habit_tracker_dashboard.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link"
+    }
+  },
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open Tracker",
+      "short_name": "Tracker",
+      "description": "Jump to the monthly habit grid",
+      "url": "habit_tracker_dashboard.html",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
